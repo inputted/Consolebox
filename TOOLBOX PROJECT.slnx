@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="TOOLBOX PROJECT/TOOLBOX PROJECT.vcxproj" Id="3b20acd7-402c-4da0-84d7-75fb8fd02ef1" />
+</Solution>
