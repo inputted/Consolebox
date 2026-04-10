@@ -20,7 +20,7 @@ int main()
 			testFunction();
 			break;
 		case 2:
-			// Call calculator function
+			runCalculator();
 			break;
 		case 3:
 			// Call to-do list function
