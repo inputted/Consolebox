@@ -17,7 +17,7 @@ int main()
 		int choice = getMenuChoice();
 		switch (choice) {
 		case 1:
-			testFunction();
+			openNotes();
 			break;
 		case 2:
 			// Call calculator function
@@ -26,6 +26,12 @@ int main()
 			// Call to-do list function
 			break;
 		case 4:
+			// Clock
+			break;
+		case 5:
+			// Weather
+			break;
+		case 6:
 			running = false;
 			break;
 		default:

@@ -25,15 +25,28 @@ namespace Format {
 
 
 void displayMenu() {
-	std::cout << Format::YELLOW << "Welcome to the Toolbox Project!\n\nMenu will appear shortly." << Format::RESET << std::endl;
-	std::this_thread::sleep_for(std::chrono::seconds(3));
 	std::cout << Format::CLEAR;
-	std::cout << Format::CYAN << "====== Main Menu ======\n" << Format::RESET;
+	std::cout << Format::CYAN << "====== Main Menu ======\n\n" << Format::RESET;
+	std::cout << "Type only the function number to select it.\n";
 	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 1. Notes        |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 2. Calculator   |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 3. To-Do List   |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 4. Exit         |\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::GREEN << " 1. Notes        "<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::CYAN << " 2. Calculator   "<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::MAGENTA << " 3. To-Do List   "<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::RESET << " 4. Clock        "<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::BLUE << " 5. Weather      "<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::RED << " 6. Exit         "<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
+}
+
+void displayNotesMenu() {
+	std::cout << Format::CLEAR;
+	std::cout << Format::CYAN << "====== Notes Menu ======\n" << Format::RESET;
+	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
+	std::cout << Format::YELLOW << "| 1. Create Note  |\n" << Format::RESET;
+	std::cout << Format::YELLOW << "| 2. View Notes   |\n" << Format::RESET;
+	std::cout << Format::YELLOW << "| 3. Delete Note  |\n" << Format::RESET;
+	std::cout << Format::YELLOW << "| 4. Import Note  |\n" << Format::RESET;
+	std::cout << Format::YELLOW << "| 5. Back to Main |\n" << Format::RESET;
 	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
 }
 
