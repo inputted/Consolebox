@@ -50,6 +50,18 @@ void displayNotesMenu() {
 	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
 }
 
+void displayCalculatorMenu() {
+	std::cout << Format::CLEAR;
+	std::cout << Format::CYAN << "====== Calculator ======\n" << Format::RESET;
+	std::cout << "Type 'exit' to go back and 'c' to clear your history.\n";
+}
+
+std::string getCalcInput() {
+	std::string final;
+	std::cin >> final;
+	return final;
+}
+
 int getMenuChoice() {
 	int choice;
 	std::cin >> choice;
