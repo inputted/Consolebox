@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Notes.h"
+#include "UI.h"
 
 
-int testFunction() {
-	std::cout << "This is a test function in Notes.cpp" << std::endl;
-	return 42;
+void openNotes() {
+	displayNotesMenu();
+	int choice = getMenuChoice();
 }
