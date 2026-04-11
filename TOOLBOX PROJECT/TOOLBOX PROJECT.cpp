@@ -23,7 +23,7 @@ int main()
 			runCalculator();
 			break;
 		case 3:
-			// Call to-do list function
+			// to-do list function
 			break;
 		case 4:
 			// Clock
