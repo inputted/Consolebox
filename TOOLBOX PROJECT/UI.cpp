@@ -41,13 +41,13 @@ void displayMenu() {
 void displayNotesMenu() {
 	std::cout << Format::CLEAR;
 	std::cout << Format::CYAN << "====== Notes Menu ======\n" << Format::RESET;
-	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 1. Create Note  |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 2. View Notes   |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 3. Delete Note  |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 4. Import Note  |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "| 5. Back to Main |\n" << Format::RESET;
-	std::cout << Format::YELLOW << "+-----------------+\n" << Format::RESET;
+	std::cout << Format::GREEN << "+-----------------+\n" << Format::RESET;
+	std::cout << Format::GREEN << "|" << Format::RESET <<  " 1. Create Note  "<< Format::GREEN << "|\n" << Format::RESET;
+	std::cout << Format::GREEN << "|" << Format::RESET <<  " 2. View Notes   "<< Format::GREEN << "|\n" << Format::RESET;
+	std::cout << Format::GREEN << "|" << Format::RESET <<  " 3. Delete Note  "<< Format::GREEN << "|\n" << Format::RESET;
+	std::cout << Format::GREEN << "|" << Format::RESET <<  " 4. Import Note  "<< Format::GREEN << "|\n" << Format::RESET;
+	std::cout << Format::GREEN << "|" << Format::RESET <<  " 5. Back to Main "<< Format::GREEN << "|\n" << Format::RESET;
+	std::cout << Format::GREEN << "+-----------------+\n" << Format::RESET;
 }
 
 void displayCalculatorMenu() {
@@ -56,14 +56,14 @@ void displayCalculatorMenu() {
 	std::cout << "Type 'exit' to go back and 'c' to clear your history.\n";
 }
 
-std::string getCalcInput() {
-	std::string final;
-	std::cin >> final;
-	return final;
+std::string getStringInput() {
+	std::string userString;
+	std::cin >> userString;
+	return userString;
 }
 
-int getMenuChoice() {
-	int choice;
-	std::cin >> choice;
-	return choice;
+int getIntInput() {
+	int userInt;
+	std::cin >> userInt;
+	return userInt;
 }

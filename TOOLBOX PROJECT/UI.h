@@ -2,7 +2,7 @@
 
 void displayMenu();
 void displayCalculatorMenu();
-std::string getCalcInput();
-int getMenuChoice();
 void displayNotesMenu();
-int getMenuChoice();
+
+int getIntInput();
+std::string getStringInput();

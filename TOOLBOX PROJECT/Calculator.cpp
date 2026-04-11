@@ -9,7 +9,7 @@ void runCalculator() {
 	std::string userInput;
 	displayCalculatorMenu();
 	while (running) {
-		userInput = getCalcInput();
+		userInput = getStringInput();
 		if (userInput == "exit") {
 			running = false;
 			displayMenu();

@@ -14,7 +14,7 @@ int main()
 	bool running = true;
 
 	while (running) {
-		int choice = getMenuChoice();
+		int choice = getIntInput();
 		switch (choice) {
 		case 1:
 			openNotes();
