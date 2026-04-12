@@ -10,6 +10,8 @@
 
 void createNote();
 void fetchNotes();
+void deleteNote();
+void importNote();
 
 void openNotes() {
 	bool running = true;
@@ -24,10 +26,10 @@ void openNotes() {
 			fetchNotes();
 			break;
 		case 3:
-			// Delete note
+			deleteNote();
 			break;
 		case 4:
-			// Import note
+			importNote();
 			break;
 		case 5:
 			running = false;
@@ -86,5 +88,32 @@ void fetchNotes() {
 		ShellExecuteA(NULL, "open", ("StoredNotes\\" + quickNotesArray[choice - 1]).c_str(), NULL, NULL, SW_SHOWDEFAULT);
 	} else{
 		std::cout << "Invalid choice.\n" << std::endl;
+	}
+}
+
+void deleteNote() {
+	std::string noteTitle;
+	std::cout << "Enter the title of the note to delete: ";
+	std::cin.ignore();
+	std::getline(std::cin, noteTitle);
+	if (std::filesystem::exists("StoredNotes\\" + noteTitle + ".txt")) {
+		std::filesystem::remove("StoredNotes\\" + noteTitle + ".txt");
+		std::cout << "Note deleted successfully!" << std::endl;
+	}
+	else {
+		std::cout << "Note does not exist. Did you type the name correct? (do not include .txt)" << std::endl;
+	}
+}
+
+void importNote() {
+	std::string filePath;
+	std::cout << "Enter the full path of the note to import: ";
+	std::cin.ignore();
+	std::getline(std::cin, filePath);
+	if (std::filesystem::exists(filePath)) {
+		std::filesystem::copy(filePath, "StoredNotes\\" + std::filesystem::path(filePath).filename().string());
+		std::cout << "Note imported successfully!" << std::endl;
+	} else {
+		std::cout << "File does not exist. Please check the path and try again." << std::endl;
 	}
 }
