@@ -12,6 +12,7 @@ void addClock();
 void viewClocks();
 void deleteClock();
 
+// Clock is very difficult to get working, will only display local time for now
 void openClock() {
 	viewClocks();
 }
