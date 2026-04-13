@@ -5,6 +5,7 @@
 #include <string>
 #include "Calculator.h"
 #include "Notes.h"
+#include "ToDoList.h"
 #include "UI.h"
 
 
@@ -12,26 +13,22 @@ int main()
 {
 	displayMenu();
 	bool running = true;
-
-	while (running) {
+	while (running) { // Switch statement used for navigation, persistent across all menus
 		int choice = getIntInput();
 		switch (choice) {
 		case 1:
 			openNotes();
 			break;
 		case 2:
-			runCalculator();
+			openCalculator();
 			break;
 		case 3:
-			// to-do list function
+			openToDoList();
 			break;
 		case 4:
 			// Clock
 			break;
 		case 5:
-			// Weather
-			break;
-		case 6:
 			running = false;
 			break;
 		default:
@@ -39,4 +36,5 @@ int main()
 			break;
 		}
 	}
+	return 0;
 }

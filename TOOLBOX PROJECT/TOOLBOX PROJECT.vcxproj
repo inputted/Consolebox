@@ -128,13 +128,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Calculator.cpp" />
+    <ClCompile Include="Clock.cpp" />
     <ClCompile Include="Notes.cpp" />
+    <ClCompile Include="ToDoList.cpp" />
     <ClCompile Include="TOOLBOX PROJECT.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculator.h" />
+    <ClInclude Include="Clock.h" />
     <ClInclude Include="Notes.h" />
+    <ClInclude Include="ToDoList.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

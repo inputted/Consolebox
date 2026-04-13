@@ -15,7 +15,7 @@ void importNote();
 
 void openNotes() {
 	bool running = true;
-	displayNotesMenu();
+	displayNotesMenu(); // Displays its menu from the UI file
 	while (running) {
 		int choice = getIntInput();
 		switch (choice) {
@@ -47,10 +47,11 @@ void createNote() {
 	std::cout << "Enter note title: ";
 	std::cin.ignore();
 	std::getline(std::cin, noteTitle);
-	std::ofstream noteFile("StoredNotes\\" + noteTitle + ".txt");
+	std::ofstream noteFile("StoredNotes\\" + noteTitle + ".txt"); // StoredNotes is the subfolder where each note is stored locally
 	if (noteFile.is_open()) {
 		noteFile.close();
 		std::cout << "Note created successfully!" << std::endl;
+		// Instead of making my own editor, the program uses the users default text editor
 		ShellExecuteA(NULL, "open", ("StoredNotes\\" + noteTitle + ".txt").c_str(), NULL, NULL, SW_SHOWDEFAULT);
 	} else {
 		std::cout << "Error creating note." << std::endl;
@@ -58,11 +59,11 @@ void createNote() {
 }
 
 void fetchNotes() {
-	std::string quickNotesArray[10];
+	std::string quickNotesArray[10]; // Only fetches the first 10 notes
 	int index = 0;
 
 	std::cout << "\nStored Notes:\n";
-
+	// The program loops the subfolder for the first 10 notes, and adds them to the array for quick access
 	for (const auto& entry : std::filesystem::directory_iterator("StoredNotes")) {
 		std::cout << index+1 << ". " << entry.path().filename().string() << std::endl;
 		if (index < 10) {
@@ -73,6 +74,7 @@ void fetchNotes() {
 			break;
 		}
 	}
+	// If the desired file is not in the quick access, the user can instead manually type the file name
 	std::cout << "\nEnter the note number, type 20 to manually enter file name, and 0 to go back: ";
 	int choice = getIntInput();
 	if (choice == 20) {
@@ -91,6 +93,7 @@ void fetchNotes() {
 	}
 }
 
+// This function deletes a note, given its name. Pretty self explanatory
 void deleteNote() {
 	std::string noteTitle;
 	std::cout << "Enter the title of the note to delete: ";
@@ -105,6 +108,7 @@ void deleteNote() {
 	}
 }
 
+// This function lets the user copy a note from another location to access within the program
 void importNote() {
 	std::string filePath;
 	std::cout << "Enter the full path of the note to import: ";
