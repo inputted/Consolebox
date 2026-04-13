@@ -59,7 +59,7 @@ void displayNotesMenu() {
 
 void displayCalculatorMenu() {
 	std::cout << Format::CLEAR;
-	std::cout << Format::CYAN << "====== Calculator Menu ======\n" << Format::RESET;
+	std::cout << Format::CYAN << "====== Conversion Menu ======\n" << Format::RESET;
 	std::cout << Format::CYAN << "+-----------------+\n" << Format::RESET;
 	std::cout << Format::CYAN << "|" << Format::RESET << " 1. Calculator  " << Format::CYAN<< "|\n" << Format::RESET;
 	std::cout << Format::CYAN << "|" << Format::RESET << " 2. Unit Conversion   " << Format::CYAN << "|\n" << Format::RESET;
