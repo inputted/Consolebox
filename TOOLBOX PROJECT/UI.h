@@ -3,8 +3,9 @@
 void displayMenu();
 void displayCalculatorMenu();
 void displayUnitConvertMenu();
+void displayClockMenu();
 void displayNotesMenu();
-void displayToDoListMenu(std::string upcomingTasks[3]);
+void displayToDoListMenu();
 
 int getIntInput();
 std::string getStringInput();

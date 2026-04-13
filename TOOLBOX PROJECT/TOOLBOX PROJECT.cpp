@@ -6,6 +6,7 @@
 #include "Calculator.h"
 #include "Notes.h"
 #include "ToDoList.h"
+#include "Clock.h"
 #include "UI.h"
 
 
@@ -26,7 +27,7 @@ int main()
 			openToDoList();
 			break;
 		case 4:
-			// Clock
+			openClock();
 			break;
 		case 5:
 			running = false;

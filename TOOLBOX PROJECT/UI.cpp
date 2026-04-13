@@ -79,7 +79,7 @@ void displayUnitConvertMenu() {
 	std::cout << Format::CYAN << "+-----------------+\n" << Format::RESET;
 }
 
-void displayToDoListMenu(std::string upcomingTasks[3]) {
+void displayToDoListMenu() {
 	std::cout << Format::CLEAR;
 	std::cout << Format::CYAN << "====== To-Do List ======\n" << Format::RESET;
 	//std::cout << Format::YELLOW << "Upcoming Tasks:\n" << Format::RESET;
@@ -95,6 +95,18 @@ void displayToDoListMenu(std::string upcomingTasks[3]) {
 	std::cout << Format::MAGENTA << "|" << Format::RESET << " 4. Back to Main  " << Format::MAGENTA << "|\n" << Format::RESET;
 	std::cout << Format::MAGENTA << "+------------------+\n" << Format::RESET;
 }
+
+void displayClockMenu() {
+	std::cout << Format::CLEAR;
+	std::cout << "====== Clock Menu ======\n";
+	std::cout << "+-----------------+\n";
+	std::cout << "| 1. View clocks  |\n";
+	std::cout << "| 2. Add clock  |\n";
+	std::cout << "| 3. Delete clock   |\n";
+	std::cout << "| 4. Back to Main|\n";
+	std::cout << "+-----------------+\n";
+}
+
 
 // Simple input functions, made for easy reusability
 std::string getStringInput() {
