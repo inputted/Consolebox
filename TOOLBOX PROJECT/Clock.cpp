@@ -18,11 +18,10 @@ void openClock() {
 }
 
 void viewClocks() {
-	std::string line;
 	std::time_t now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 	std::tm localTime;
 	localtime_s(&localTime, &now);
-	std::cout << "Local time :" << std::put_time(&localTime, "%Y-%m-%d %H:%M:%S") << std::endl;
+	std::cout << "Local time: " << std::put_time(&localTime, "%Y-%m-%d %H:%M:%S") << std::endl;
 	std::cout << std::endl;
 }
 

@@ -9,7 +9,6 @@
 #include "ToDoList.h"
 #include "UI.h"
 
-bool initialImport = false;
 
 void createTask();
 void viewTasks();
@@ -80,14 +79,13 @@ void viewTasks() {
 	if (inFile.is_open()) {
 		std::string line;
 		int taskNumber = 1;
-		// Check if file is empty
-		if (!std::getline(inFile, line)) {
-			std::cout << "No tasks to view." << std::endl;
-			inFile.close();
-			return;
-		}
 		// Grabs each bit of information to be formatted in the output
 		while (std::getline(inFile, line)) {
+			if (taskNumber == 1 && line.empty()) {
+				std::cout << "No tasks to view." << std::endl;
+				inFile.close();
+				return;
+			}
 			std::istringstream ss(line);
 			std::string title, deadline, completedStr;
 			std::getline(ss, title, '|');

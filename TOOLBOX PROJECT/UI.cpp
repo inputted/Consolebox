@@ -37,10 +37,9 @@ void displayMenu() {
 	std::cout << "Type only the function number to select it.\n";
 	std::cout << Format::YELLOW << "+--------------------+\n" << Format::RESET;
 	std::cout << Format::YELLOW << "|" << Format::GREEN << " 1. Notes           "<<Format::YELLOW<<"|\n" << Format::RESET;
-	std::cout << Format::YELLOW << "|" << Format::CYAN << " 2. Conversions"<<Format::YELLOW<<"|\n" << Format::RESET;
+	std::cout << Format::YELLOW << "|" << Format::CYAN << " 2. Conversions     "<<Format::YELLOW<<"|\n" << Format::RESET;
 	std::cout << Format::YELLOW << "|" << Format::MAGENTA << " 3. To-Do List      "<<Format::YELLOW<<"|\n" << Format::RESET;
 	std::cout << Format::YELLOW << "|" << Format::RESET << " 4. Clock           "<<Format::YELLOW<<"|\n" << Format::RESET;
-	//std::cout << Format::YELLOW << "|" << Format::BLUE << " 5. Weather         "<<Format::YELLOW<<"|\n" << Format::RESET;
 	std::cout << Format::YELLOW << "|" << Format::RED << " 5. Exit            "<<Format::YELLOW<<"|\n" << Format::RESET;
 	std::cout << Format::YELLOW << "+--------------------+\n" << Format::RESET;
 }
@@ -71,11 +70,11 @@ void displayUnitConvertMenu() {
 	std::cout << Format::CLEAR;
 	std::cout << Format::CYAN << "====== Conversion Menu ======\n" << Format::RESET;
 	std::cout << Format::CYAN << "+-----------------+\n" << Format::RESET;
-	std::cout << Format::CYAN << "|" << Format::RESET << " 1. Time  " << Format::CYAN << "|\n" << Format::RESET;
-	std::cout << Format::CYAN << "|" << Format::RESET << " 2. Distance   " << Format::CYAN << "|\n" << Format::RESET;
-	std::cout << Format::CYAN << "|" << Format::RESET << " 3. Computer   " << Format::CYAN << "|\n" << Format::RESET;
-	std::cout << Format::CYAN << "|" << Format::RESET << " 4. Weight   " << Format::CYAN << "|\n" << Format::RESET;
-	std::cout << Format::CYAN << "|" << Format::RESET << " 5. Back " << Format::CYAN << "|\n" << Format::RESET;
+	std::cout << Format::CYAN << "|" << Format::RESET << " 1. Time         " << Format::CYAN << "|\n" << Format::RESET;
+	std::cout << Format::CYAN << "|" << Format::RESET << " 2. Distance     " << Format::CYAN << "|\n" << Format::RESET;
+	std::cout << Format::CYAN << "|" << Format::RESET << " 3. Computer     " << Format::CYAN << "|\n" << Format::RESET;
+	std::cout << Format::CYAN << "|" << Format::RESET << " 4. Weight       " << Format::CYAN << "|\n" << Format::RESET;
+	std::cout << Format::CYAN << "|" << Format::RESET << " 5. Back         " << Format::CYAN << "|\n" << Format::RESET;
 	std::cout << Format::CYAN << "+-----------------+\n" << Format::RESET;
 }
 
